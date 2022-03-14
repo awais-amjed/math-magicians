@@ -6,7 +6,7 @@
 
 ![screenshot](./app_screenshot.png)
 
-A is a Single Page Application (SPA) created in React that allows users to make simple calculations & Read a random Math Related Quote.
+Math Magicians is a Single Page Application (SPA) created in React that allows users to make simple calculations & Read a random Math Related Quote.
 
 ## Built With
 
