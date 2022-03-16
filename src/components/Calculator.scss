@@ -1,30 +1,61 @@
 $orange-button-color: #f5913e;
+$calculator-background: #d1d1d1;
+$buttons-gap: 1px;
+$border-color: #2a2d37;
 
 #calculator {
   display: flex;
   flex-direction: column;
-  border: 3px solid black;
-  width: 400px;
+  border: 2px solid $border-color;
+  border-radius: 2px;
+  width: 350px;
   height: 500px;
+  background-color: $calculator-background;
+  box-shadow: 4px 4px 8px 1px grey;
 
   #display-bar {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 20px;
+    justify-self: end;
     display: flex;
     align-items: center;
-    text-align: right;
+    justify-content: end;
+    flex-grow: 1;
+    border-bottom: 2px solid $border-color;
+  }
+
+  .calculator-row:first-child {
+    flex-grow: 1.3;
+  }
+
+  hr {
+    background-color: transparent;
+    border: none;
+    height: 1px;
   }
 
   .calculator-row {
     flex: 1 1 0;
     display: flex;
     flex-direction: row;
+    background-color: $calculator-background;
+    gap: $buttons-gap;
 
     .calculator-button {
+      font-weight: 600;
+      font-size: 1.1rem;
+      border: none;
       flex: 1 1 0;
       background-color: white;
     }
 
+    .calculator-button:hover {
+      border: 1px solid $border-color;
+    }
+
     .double-flex {
-      flex: 2.05 2.05 0;
+      flex: 2.02 2.02 0;
     }
 
     .calculator-button:last-child {

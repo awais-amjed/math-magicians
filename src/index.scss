@@ -7,3 +7,11 @@
   font-family: 'Poppins', sans-serif;
   transition: 300ms;
 }
+
+body {
+  background-color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
