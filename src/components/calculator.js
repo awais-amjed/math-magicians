@@ -8,7 +8,8 @@ class Calculator extends React.Component {
     super(props);
 
     this.state = {
-      total: 0,
+      displayOutput: '0',
+      total: null,
       next: null,
       operation: null,
     };
@@ -18,7 +19,16 @@ class Calculator extends React.Component {
 
   performCalculation(buttonName) {
     const { total, next, operation } = calculate(this.state, buttonName);
+    let { displayOutput } = this.state;
+
+    if (total || next || operation) {
+      displayOutput = (total ?? '') + (operation == null ? '' : ` ${operation} `) + (next ?? '');
+    } else {
+      displayOutput = '0';
+    }
+
     this.setState({
+      displayOutput,
       total,
       next,
       operation,
@@ -26,12 +36,12 @@ class Calculator extends React.Component {
   }
 
   render() {
-    const { total } = this.state;
+    const { displayOutput } = this.state;
 
     return (
       <div id="calculator">
         <div className="calculator-row">
-          <p id="display-bar">{total}</p>
+          <p id="display-bar">{displayOutput}</p>
         </div>
         <div className="calculator-row">
           <CalculatorButton text="AC" performCalculation={this.performCalculation} />
