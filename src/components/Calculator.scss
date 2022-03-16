@@ -1,0 +1,34 @@
+$orange-button-color: #f5913e;
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid black;
+  width: 400px;
+  height: 500px;
+
+  #display-bar {
+    display: flex;
+    align-items: center;
+    text-align: right;
+  }
+
+  .calculator-row {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: row;
+
+    .calculator-button {
+      flex: 1 1 0;
+      background-color: white;
+    }
+
+    .double-flex {
+      flex: 2.05 2.05 0;
+    }
+
+    .calculator-button:last-child {
+      background-color: $orange-button-color;
+    }
+  }
+}
