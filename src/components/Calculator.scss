@@ -25,10 +25,6 @@ $border-color: #2a2d37;
     border-bottom: 2px solid $border-color;
   }
 
-  .calculator-row:first-child {
-    flex-grow: 1.3;
-  }
-
   hr {
     background-color: transparent;
     border: none;
@@ -56,6 +52,10 @@ $border-color: #2a2d37;
 
     .double-flex {
       flex: 2.02 2.02 0;
+    }
+
+    .calculator-row:first-child {
+      flex-grow: 1.3;
     }
 
     .calculator-button:last-child {
