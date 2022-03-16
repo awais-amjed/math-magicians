@@ -11,6 +11,8 @@ Math Magicians is a Single Page Application (SPA) created in React that allows u
 ## Built With
 
 - React
+- HTML
+- SCSS
 
 ## Live Demo
 
