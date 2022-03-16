@@ -1,6 +1,6 @@
 import React from 'react';
-import './Calculator.scss';
-import CalculatorButton from './CalculatorButton';
+import './calculator.scss';
+import CalculatorButton from './calculator_button';
 
 const Calculator = () => (
   <div id="calculator">

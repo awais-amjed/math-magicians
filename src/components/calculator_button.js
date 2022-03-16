@@ -1,5 +1,5 @@
 import React from 'react';
-import './Calculator.scss';
+import './calculator.scss';
 import PropTypes from 'prop-types';
 
 const CalculatorButton = ({ text, takesDoubleSpace }) => (
