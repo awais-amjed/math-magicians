@@ -7,7 +7,7 @@ const Calculator = () => {
   const [calculator, setCalculatorState] = useState(
     {
       displayOutput: '0',
-      total: null,
+      total: 0,
       next: null,
       operation: null,
     },
@@ -26,7 +26,7 @@ const Calculator = () => {
 
     setCalculatorState({
       displayOutput,
-      total,
+      total: total ?? 0,
       next,
       operation,
     });
