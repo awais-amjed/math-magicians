@@ -1,25 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './calculator.scss';
 import CalculatorButton from './calculator_button';
 import calculate from './logic/calculate';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
+const Calculator = () => {
+  const [calculator, setCalculatorState] = useState(
+    {
       displayOutput: '0',
-      total: null,
+      total: 0,
       next: null,
       operation: null,
-    };
+    },
+  );
 
-    this.performCalculation = this.performCalculation.bind(this);
-  }
+  let { displayOutput } = calculator;
 
-  performCalculation(buttonName) {
-    const { total, next, operation } = calculate(this.state, buttonName);
-    let { displayOutput } = this.state;
+  const performCalculation = (buttonName) => {
+    const { total, next, operation } = calculate(calculator, buttonName);
 
     if (total || next || operation) {
       displayOutput = (total ?? '') + (operation == null ? '' : ` ${operation} `) + (next ?? '');
@@ -27,58 +24,54 @@ class Calculator extends React.Component {
       displayOutput = '0';
     }
 
-    this.setState({
+    setCalculatorState({
       displayOutput,
-      total,
+      total: total ?? 0,
       next,
       operation,
     });
-  }
+  };
 
-  render() {
-    const { displayOutput } = this.state;
-
-    return (
-      <div id="calculator">
-        <div className="calculator-row">
-          <p id="display-bar">{displayOutput}</p>
-        </div>
-        <div className="calculator-row">
-          <CalculatorButton text="AC" performCalculation={this.performCalculation} />
-          <CalculatorButton text="+/-" performCalculation={this.performCalculation} />
-          <CalculatorButton text="%" performCalculation={this.performCalculation} />
-          <CalculatorButton text="÷" performCalculation={this.performCalculation} />
-        </div>
-        <hr />
-        <div className="calculator-row">
-          <CalculatorButton text="7" performCalculation={this.performCalculation} />
-          <CalculatorButton text="8" performCalculation={this.performCalculation} />
-          <CalculatorButton text="9" performCalculation={this.performCalculation} />
-          <CalculatorButton text="x" performCalculation={this.performCalculation} />
-        </div>
-        <hr />
-        <div className="calculator-row">
-          <CalculatorButton text="4" performCalculation={this.performCalculation} />
-          <CalculatorButton text="5" performCalculation={this.performCalculation} />
-          <CalculatorButton text="6" performCalculation={this.performCalculation} />
-          <CalculatorButton text="-" performCalculation={this.performCalculation} />
-        </div>
-        <hr />
-        <div className="calculator-row">
-          <CalculatorButton text="1" performCalculation={this.performCalculation} />
-          <CalculatorButton text="2" performCalculation={this.performCalculation} />
-          <CalculatorButton text="3" performCalculation={this.performCalculation} />
-          <CalculatorButton text="+" performCalculation={this.performCalculation} />
-        </div>
-        <hr />
-        <div className="calculator-row">
-          <CalculatorButton text="0" takesDoubleSpace performCalculation={this.performCalculation} />
-          <CalculatorButton text="." performCalculation={this.performCalculation} />
-          <CalculatorButton text="=" performCalculation={this.performCalculation} />
-        </div>
+  return (
+    <div id="calculator">
+      <div className="calculator-row">
+        <p id="display-bar">{displayOutput}</p>
       </div>
-    );
-  }
-}
+      <div className="calculator-row">
+        <CalculatorButton text="AC" performCalculation={performCalculation} />
+        <CalculatorButton text="+/-" performCalculation={performCalculation} />
+        <CalculatorButton text="%" performCalculation={performCalculation} />
+        <CalculatorButton text="÷" performCalculation={performCalculation} />
+      </div>
+      <hr />
+      <div className="calculator-row">
+        <CalculatorButton text="7" performCalculation={performCalculation} />
+        <CalculatorButton text="8" performCalculation={performCalculation} />
+        <CalculatorButton text="9" performCalculation={performCalculation} />
+        <CalculatorButton text="x" performCalculation={performCalculation} />
+      </div>
+      <hr />
+      <div className="calculator-row">
+        <CalculatorButton text="4" performCalculation={performCalculation} />
+        <CalculatorButton text="5" performCalculation={performCalculation} />
+        <CalculatorButton text="6" performCalculation={performCalculation} />
+        <CalculatorButton text="-" performCalculation={performCalculation} />
+      </div>
+      <hr />
+      <div className="calculator-row">
+        <CalculatorButton text="1" performCalculation={performCalculation} />
+        <CalculatorButton text="2" performCalculation={performCalculation} />
+        <CalculatorButton text="3" performCalculation={performCalculation} />
+        <CalculatorButton text="+" performCalculation={performCalculation} />
+      </div>
+      <hr />
+      <div className="calculator-row">
+        <CalculatorButton text="0" takesDoubleSpace performCalculation={performCalculation} />
+        <CalculatorButton text="." performCalculation={performCalculation} />
+        <CalculatorButton text="=" performCalculation={performCalculation} />
+      </div>
+    </div>
+  );
+};
 
 export default Calculator;

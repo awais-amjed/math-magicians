@@ -63,10 +63,10 @@ $border-color: #2a2d37;
       font-size: 1.5rem;
       font-weight: 700;
       padding: 0 20px;
-      justify-self: end;
+      justify-self: flex-end;
       display: flex;
       align-items: center;
-      justify-content: end;
+      justify-content: flex-end;
       flex-grow: 1;
     }
   }
