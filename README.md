@@ -16,9 +16,7 @@ Math Magicians is a Single Page Application (SPA) created in React that allows u
 
 ## Live Demo
 
-Not available yet.
-
-[//]: # ([Live Demo Link]&#40;https://awais-amjed.github.io/giggy/&#41;)
+[Live Demo Link](https://awais-amjed.github.io/math-magicians/)
 
 ## Getting Started
 
