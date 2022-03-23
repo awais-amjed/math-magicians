@@ -1,0 +1,10 @@
+#calculator-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #description {
+    display: flex;
+    flex-direction: column;
+  }
+}

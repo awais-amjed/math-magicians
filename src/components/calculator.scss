@@ -1,15 +1,12 @@
-$orange-button-color: #f5913e;
-$calculator-background: #d1d1d1;
-$buttons-gap: 1px;
-$border-color: #2a2d37;
+@import 'variables';
 
 #calculator {
   display: flex;
   flex-direction: column;
   border: 2px solid $border-color;
   border-radius: 2px;
-  width: 350px;
-  height: 500px;
+  width: 330px;
+  height: 450px;
   background-color: $calculator-background;
   box-shadow: 4px 4px 8px 1px grey;
 
