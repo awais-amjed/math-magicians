@@ -1,0 +1,13 @@
+@import 'variables';
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 80vw;
+  padding: 10px 10%;
+  height: 30px;
+  background-color: $navbar-background;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
