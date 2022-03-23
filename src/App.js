@@ -13,9 +13,9 @@ function App() {
     <BrowserRouter>
       <div id="app">
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="calculator" element={<CalculatorPage />} />
-          <Route path="quote" element={<QuotePage />} />
+          <Route path="/calculator" element={<CalculatorPage />} />
+          <Route path="/quote" element={<QuotePage />} />
+          <Route path="*" element={<HomePage />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
+$navbar-background : #a2a2a2;
+
+header {
+  height: 50px;
+  width: 80%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  background-color: $navbar-background;
+
+  h1 {
+    font-family: 'Palette Mosaic', cursive;
+  }
+
+  #navbar {
+    display: flex;
+    gap: 8px;
+  }
+
+  .link-button {
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 4px;
+  }
+
+  .link-button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .active {
+    background-color: black;
+    color: white;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    height: 100px;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 10%;
+    justify-content: center;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+}

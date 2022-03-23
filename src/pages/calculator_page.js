@@ -1,7 +1,8 @@
 import React from 'react';
+import Navbar from '../components/navbar';
 
 const CalculatorPage = () => (
-  <h1>Calculator Page</h1>
+  <Navbar />
 );
 
 export default CalculatorPage;

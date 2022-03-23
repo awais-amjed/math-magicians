@@ -1,7 +1,8 @@
 import React from 'react';
+import Navbar from '../components/navbar';
 
 const QuotePage = () => (
-  <h1>Quote Page</h1>
+  <Navbar />
 );
 
 export default QuotePage;
