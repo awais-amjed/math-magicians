@@ -2,8 +2,8 @@
 @import 'variables';
 
 header {
-  height: 50px;
-  width: 80%;
+  height: 70px;
+  width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
@@ -41,7 +41,7 @@ header {
 
 @media (max-width: 700px) {
   header {
-    height: 100px;
+    height: 120px;
     flex-direction: column;
     gap: 10px;
     padding: 5px 10%;
