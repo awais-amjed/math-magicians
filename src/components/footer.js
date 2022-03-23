@@ -8,7 +8,7 @@ const Footer = () => (
       Copyright @
       {new Date().getFullYear()}
     </p>
-    <img src={theEnd} alt="meow" width="35" />
+    <img src={theEnd} alt="end" width="35" />
   </footer>
 );
 
