@@ -11,11 +11,9 @@ const CalculatorPage = () => (
       <div id="calculator-page">
         <div id="description">
           <h2>Let&apos;s do some math!</h2>
-          <img src="https://media.giphy.com/media/WMRb9p6N4mtIRtE2zr/giphy.gif" alt="gif" height="200" />
+          <img src="https://media.giphy.com/media/WMRb9p6N4mtIRtE2zr/giphy.gif" alt="gif" height="300" />
         </div>
-        <div id="calculator-container">
-          <Calculator />
-        </div>
+        <Calculator />
       </div>
     </div>
     <Footer />

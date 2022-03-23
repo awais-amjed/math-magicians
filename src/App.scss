@@ -1,9 +1,9 @@
 .content {
-  padding: 80px 10% 50px;
-  height: 100vh;
+  padding: 90px 10% 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
 }
 
 @media (max-width: 700px) {
