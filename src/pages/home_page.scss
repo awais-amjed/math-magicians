@@ -1,0 +1,73 @@
+#home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  #welcome-images {
+    padding: 70px 0 40px;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    animation-name: dancing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
+
+  p {
+    max-width: 800px;
+  }
+
+  @keyframes dancing {
+    from { width: 100%; }
+    to { width: 80%; }
+  }
+}
+
+@media (max-width: 950px) {
+  #welcome-images {
+    img {
+      width: 150px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 710px) {
+  #welcome-images {
+    img {
+      width: 120px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 590px) {
+  #welcome-images {
+    img {
+      width: 100px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #welcome-images {
+    img {
+      width: 70px;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  #welcome-images {
+    img {
+      width: 50px;
+      height: auto;
+    }
+  }
+}

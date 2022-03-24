@@ -1,7 +1,13 @@
-#app {
-  width: 100vw;
-  height: 100vh;
+.content {
+  padding: 90px 10% 70px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 700px) {
+  .content {
+    padding-top: 140px;
+  }
 }

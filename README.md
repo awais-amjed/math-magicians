@@ -2,17 +2,18 @@
 
 # Math Magicians
 
-> A website for all fans of mathematics
+> A website for all the fans of mathematics
 
 ![screenshot](./app_screenshot.png)
 
-Math Magicians is a Single Page Application (SPA) created in React that allows users to make simple calculations & Read a random Math Related Quote.
+Math Magicians is a Single Page Application (SPA) created in React that allows users to make simple calculations & Read some famous Quotes.
 
 ## Built With
 
 - React
 - HTML
 - SCSS
+- JavaScript
 
 ## Live Demo
 
