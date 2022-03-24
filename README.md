@@ -17,7 +17,8 @@ Math Magicians is a Single Page Application (SPA) created in React that allows u
 
 ## Live Demo
 
-[Live Demo Link](https://awais-amjed-math-magicians.netlify.app/)
+- Check it out on [Netlify](https://awais-amjed-math-magicians.netlify.app/)
+- It's also available on [Heroku](https://awais-amjed-math-magicians.herokuapp.com/)
 
 ## Getting Started
 
